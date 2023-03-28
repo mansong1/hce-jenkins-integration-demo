@@ -33,9 +33,9 @@ pipeline {
                     sh scripts/launch-chaos.sh
                  '''
                  
-                 sh '''
-                    sh scripts/monitor-chaos.sh
-                 '''
+                 //sh '''
+                 //   sh scripts/monitor-chaos.sh
+                 //'''
                  
                  //sh '''
                  //   sh scripts/verify-rr.sh
