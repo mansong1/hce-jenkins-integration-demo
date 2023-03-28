@@ -66,7 +66,6 @@ pipeline {
                 sh '''
                     sh scripts/rollback-deploy.sh ${resilience_score}
                 '''
-                }
             }
         }
     }
