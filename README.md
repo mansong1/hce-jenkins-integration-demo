@@ -1,4 +1,4 @@
-# hce-jenkins-integration-demo
+# hce-jenkins-integration-demo env
 
 - test-commit #1
 - test-commit #2
