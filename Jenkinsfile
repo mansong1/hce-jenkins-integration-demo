@@ -1,10 +1,10 @@
 pipeline {
     agent any
     
-    environment {
-            notify_id = ''
-            resilience_score = ''
-        }
+    //environment {
+    //        notify_id = ''
+    //        resilience_score = ''
+    //    }
     
     parameters {
            string(name: 'WORKFLOW_ID', defaultValue: '9bd2855f-b822-464c-9906-0f9ebe824cc6') 
