@@ -1,4 +1,5 @@
 # hce-jenkins-integration-demo
 
 - test-commit #1
-- test-coomit #2
+- test-commit #2
+- test-commit #3
