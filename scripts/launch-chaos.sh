@@ -10,9 +10,7 @@ output=$(./hce-api-saas generate --api launch-experiment --account-id=${ACCOUNT_
 --project-id ${PROJECT_ID} --workflow-id ${WORKFLOW_ID} \
 --api-key ${API_KEY} --file-name hce-api.sh | jq -r '.data.runChaosExperiment.notifyID')
 
+echo ${output}
 
-resiliencyScore=$(./hce-api-saas generate --api validate-resilience-score  --account-id=${ACCOUNT_ID} \
---project-id ${PROJECT_ID} --notifyID=$output  \
---api-key ${API_KEY} --file-name hce-api.sh)
 
-echo "The Resiliency Score is: ${resiliencyScore}"
+
