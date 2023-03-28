@@ -63,10 +63,9 @@ pipeline {
         
         stage('Take Rollback Decision') {
             steps {
-                script {
-                    if (${resilience_score} < ${EXPECTED_RESILIENCE_SCORE}){
-                        sh 'scripts/rollback-deploy.sh'
-                    }
+                sh '''
+                    sh scripts/rollback-deploy.sh ${resilience_score}
+                '''
                 }
             }
         }
