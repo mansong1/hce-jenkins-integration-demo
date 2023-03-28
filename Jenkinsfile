@@ -1,12 +1,14 @@
 pipeline {
     agent any
-    parameters {
-            string(name: 'notify_id', defaultValue: '')
-            string(name: 'resilience_score', defaultValue: '0')
-        }
+    
     environment {
-           WORKFLOW_ID    = '9bd2855f-b822-464c-9906-0f9ebe824cc6' 
-           EXPECTED_RESILIENCE_SCORE = 100
+            notify_id = ''
+            resilience_score = ''
+        }
+    
+    parameters {
+           string(name: 'WORKFLOW_ID', defaultValue: '9bd2855f-b822-464c-9906-0f9ebe824cc6') 
+           string(name: 'EXPECTED_RESILIENCE_SCORE', defaultValue: '100')
     }
 
     stages {
