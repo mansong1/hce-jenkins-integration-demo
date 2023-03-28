@@ -64,6 +64,7 @@ pipeline {
         stage('Take Rollback Decision') {
             steps {
                 sh '''
+                    echo ${resilience_score}
                     sh scripts/rollback-deploy.sh ${resilience_score}
                 '''
             }
