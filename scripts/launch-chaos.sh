@@ -1,7 +1,10 @@
 #!/bin/bash
 set -e 
 
-echo ${API_KEY}
+echo "The account: ${ACCOUNT_ID}"
+echo "The api key: ${API_KEY}"
+echo "The project id: ${PROJECT_ID}"
+echo "The wf id: ${WORKFLOW_ID}"
 echo "*****"
 curl --location 'https://app.harness.io/gateway/chaos/manager/api/query?accountIdentifier=${ACCOUNT_ID}' \
 --header 'x-api-key: ${API_KEY}' \
