@@ -39,8 +39,7 @@ pipeline {
                     sh scripts/launch-chaos.sh > n_id.txt
                  '''
                  script {
-                     //env.notify_id = sh(returnStdout: true, script: 'cat n_id.txt').trim()
-                     notify_id = sh(returnStdout: true, script: 'cat n_id.txt').trim()
+                     env.notify_id = sh(returnStdout: true, script: 'cat n_id.txt').trim()
                  }   
             }   
         }
@@ -59,8 +58,7 @@ pipeline {
                     sh scripts/verify-rr.sh ${notify_id} > r_s.txt
                 '''
                 script {
-                     //env.resilience_score = sh(returnStdout: true, script: 'cat r_s.txt').trim()
-                    resilience_score = sh(returnStdout: true, script: 'cat r_s.txt').trim()
+                    env.resilience_score = sh(returnStdout: true, script: 'cat r_s.txt').trim()
                  }
             }
         }
