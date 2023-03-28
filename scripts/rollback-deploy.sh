@@ -1,7 +1,7 @@
 #!/bin/bash
 
-set -e
+set -ex
 
-if [ "$1" -lt "${EXPECTED_RESILIENCE_SCORE}" ]; then
+if [ $1 -lt ${EXPECTED_RESILIENCE_SCORE} ]; then
   kubectl rollout undo deployment/cartservice -n boutique
 fi 
