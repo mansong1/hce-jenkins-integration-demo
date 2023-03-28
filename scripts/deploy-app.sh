@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl apply -f ../cartservice.yaml
+kubectl apply -f ../k8s/cartservice.yaml
