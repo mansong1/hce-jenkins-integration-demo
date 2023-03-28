@@ -7,6 +7,18 @@ pipeline {
 
     stages {
         
+        stage('Checkout') {
+            steps {
+                // Check out code from Git
+                checkout([$class: 'GitSCM', 
+                    branches: [[name: '*/main']], 
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [], 
+                      submoduleCfg: [],
+                    userRemoteConfigs: [[url: 'https://github.com/ksatchit/hce-jenkins-integration-demo.git']]])
+            }
+         }
+        
         stage('Launch App') {
             steps {
                 git url: "https://github.com/ksatchit/hce-jenkins-integration-demo"
