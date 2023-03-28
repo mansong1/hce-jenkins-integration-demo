@@ -9,9 +9,14 @@ pipeline {
         
         stage('Launch App') {
             steps {
-                withKubeConfig([namespace: 'boutique']){
-                    sh 'kubectl apply -f ../cartservice.yaml'
-                }
+                git url: "https://github.com/ksatchit/hce-jenkins-integration-demo"
+                step([$class: 'KubernetesEngineBuilder', 
+                        projectId: "lucid-timing-371211",
+                        clusterName: "cluster-1",
+                        zone: "us-central1-c",
+                        manifestPattern: 'cartservice.yaml',
+                        credentialsId: "My First Project",
+                        verifyDeployments: true])
             }
         }
 
