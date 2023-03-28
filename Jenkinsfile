@@ -33,29 +33,37 @@ pipeline {
 
         stage('Launch Chaos Experiment') {
             steps {
-                 nid_output = sh (script: 'sh scripts/launch-chaos.sh', returnStdout: true).trim()
-                 env.notify_id = nid_output
+                 sh '''
+                    sh scripts/launch-chaos.sh > n_id.txt
+                 '''
+                 script {
+                     env.notify_id = sh(returnStdout: true, script: 'cat n_id.txt').trim()
+                 }   
             }   
         }
         
         stage('Monitor Chaos Experiment') {
             steps {
                 sh '''
-                    sh scripts/monitor-chaos.sh ${env.notify_id}
+                    sh scripts/monitor-chaos.sh ${notify_id}
                 '''
             }
         }
         
         stage('Verify Resilience Score') {
             steps {
-                rs_output = sh (script: 'sh scripts/verify-rr.sh ${env.notify_id}', returnStdout: true).trim()
-                env.resilience_score = rs_output
+                sh '''
+                    sh scripts/verify-rr.sh ${notify_id} > r_s.txt
+                '''
+                script {
+                     env.resilience_score = sh(returnStdout: true, script: 'cat r_s.txt').trim()
+                 }
             }
         }
         
         stage('Take Rollback Decision') {
             steps {
-                if (env.resilience_score.toInteger() < ${EXPECTED_RESILIENCE_SCORE}){
+                if (${resilience_score} < ${EXPECTED_RESILIENCE_SCORE}){
                     sh '''
                         sh scripts/rollback-deploy.sh
                     '''
