@@ -1,6 +1,8 @@
 pipeline {
     agent any
-    
+    parameters {
+            string(name: 'resilience_score', defaultValue: '0')
+        }
     environment {
            WORKFLOW_ID    = '9bd2855f-b822-464c-9906-0f9ebe824cc6'                    
     }
