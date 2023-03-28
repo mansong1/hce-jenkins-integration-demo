@@ -8,8 +8,10 @@ pipeline {
     stages {
         
         stage('Launch App') {
-            withKubeConfig([namespace: 'boutique']){
-                sh 'kubectl apply -f ../cartservice.yaml'
+            steps {
+                withKubeConfig([namespace: 'boutique']){
+                    sh 'kubectl apply -f ../cartservice.yaml'
+                }
             }
         }
 
