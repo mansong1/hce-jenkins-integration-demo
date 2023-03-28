@@ -7,13 +7,13 @@ pipeline {
 
     stages {
         
-//         stage('Pre-App-Check') {
-//             steps {
-//                  sh '''
-//                     sh scripts/pre-chaos-check-url.sh
-//                  '''
-//             }
-//         }
+        stage('Launch App') {
+            steps {
+                 sh '''
+                    sh scripts/deploy-app.sh
+                 '''
+            }
+        }
 
         stage('Launch Chaos Experiment') {
             steps {
