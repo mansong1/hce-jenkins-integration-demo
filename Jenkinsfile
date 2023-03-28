@@ -14,7 +14,7 @@ pipeline {
                         projectId: "lucid-timing-371211",
                         clusterName: "cluster-1",
                         zone: "us-central1-c",
-                        manifestPattern: 'k8s/',
+                        manifestPattern: 'k8s/cartservice.yaml',
                         credentialsId: "My First Project",
                         verifyDeployments: true])
             }
