@@ -19,23 +19,17 @@ pipeline {
             }
          }
         
-        stage('Launch App') {
+        stage('Deploy Carts Microservice') {
             steps {
-                git url: "https://github.com/ksatchit/hce-jenkins-integration-demo"
-                step([$class: 'KubernetesEngineBuilder', 
-                        projectId: "lucid-timing-371211",
-                        clusterName: "cluster-1",
-                        zone: "us-central1-c",
-                        manifestPattern: 'k8s/cartservice.yaml',
-                        credentialsId: "My First Project",
-                        verifyDeployments: true])
+                 sh '''
+                    sh scripts/deploy-app.sh
+                 '''
             }
         }
 
         stage('Launch Chaos Experiment') {
             steps {
                  sh '''
-                    echo ${PROJECT_ID}
                     sh scripts/launch-chaos.sh
                  '''
                  
