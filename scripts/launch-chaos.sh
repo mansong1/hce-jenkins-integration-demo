@@ -6,7 +6,7 @@ curl -L https://github.com/uditgaurav/hce-api-template/releases/download/0.1.0-s
 
 chmod +x hce-api-saas
 
-output=$(hce-api-saas generate --api launch-experiment --account-id=${ACCOUNT_ID} \
+output=$(./hce-api-saas generate --api launch-experiment --account-id=${ACCOUNT_ID} \
 --project-id ${PROJECT_ID} --workflow-id ${WORKFLOW_ID} \
 --api-key ${API_KEY} --file-name hce-api.sh | jq -r '.data.runChaosExperiment.notifyID')
 
