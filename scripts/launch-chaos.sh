@@ -14,3 +14,7 @@ output=$(./hce-api-saas generate --api launch-experiment --account-id=${ACCOUNT_
 ./hce-api-saas generate --api monitor-experiment --account-id=${ACCOUNT_ID} \
 --project-id ${PROJECT_ID} --notifyID=$output  \
 --api-key ${API_KEY} --file-name hce-api.sh --timeout="500"
+
+./hce-api-saas generate --api validate-resilience-score  --account-id=${ACCOUNT_ID} \
+--project-id ${PROJECT_ID} --notifyID=$output  \
+--api-key ${API_KEY} --file-name hce-api.sh
