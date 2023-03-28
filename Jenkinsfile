@@ -33,21 +33,14 @@ pipeline {
                     sh scripts/launch-chaos.sh
                  '''
                  
-//                  sh '''
-//                     sh scripts/monitor-chaos.sh
-//                  '''
+                 sh '''
+                    sh scripts/monitor-chaos.sh
+                 '''
                  
-//                  sh '''
-//                     sh scripts/verify-rr.sh
-//                  '''
+                 //sh '''
+                 //   sh scripts/verify-rr.sh
+                 //'''
             }
         }
-//         stage('Post-App-Check') {
-//             steps {
-//                  sh '''
-//                     sh scripts/post-chaos-check-url.sh
-//                  '''
-//             }
-//         }
     }
 }
