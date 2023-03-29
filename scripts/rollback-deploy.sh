@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ex
+set -e
 
 #remove double quotes on the value obtained from jq parse
 obtained_resilience_score=$(echo "$1" | tr -d '"')
