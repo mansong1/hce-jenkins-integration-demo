@@ -20,8 +20,10 @@ Despite being able to download curl commands from our [Postman collection](https
 
 #### 3. Use the same flow as the HCE CD-CE demo
 
-- Store account information and api keys as secrets 
-- Parameterize requirements (experiment IDs) and expectations (resilience score) in the pipeline  
+- Deploy a microservice, subject it to a chaos experiment and rollback based on the chaos testing outcomes
+- Parameterize requirements (experiment IDs) and expectations (resilience score) in the pipeline (just as the Harness step provides)
+
+**Note**: Store account information and api keys as secrets
     
 The detailed documentation for the tutorial/demo-block can be found in [tutorial.md](./tutorial.md) 
 
