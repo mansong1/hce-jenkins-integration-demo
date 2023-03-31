@@ -1,6 +1,6 @@
 # HCE-Jenkins Integration Demo Block 
 
-## Considerations
+## Considerations for Demo Team 
 
 #### 1. Make the Jenkins setup simple. We are looking at both existing Jenkins as well as new users here
 
@@ -20,8 +20,13 @@ Despite being able to download curl commands from our [Postman collection](https
 
 #### 3. Use the same flow as the HCE CD-CE demo
 
-- Parameterize requirements and the stages
+- Store account information and api keys as secrets 
+- Parameterize requirements (experiment IDs) and expectations (resilience score) in the pipeline  
     
-    
+The detailed documenttation can be found in [tutorial.md](./tutorial.md) 
+
+
+
+
 
 
