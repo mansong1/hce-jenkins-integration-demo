@@ -1,6 +1,6 @@
-# HCE-Jenkins Integration Demo Block 
+# Notes for Demo Team 
 
-## Considerations for Demo Team 
+Here are a list of things we considered before creating this demo block. FYI. 
 
 #### 1. Make the Jenkins setup simple. We are looking at both existing Jenkins as well as new users here
 
