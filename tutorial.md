@@ -57,9 +57,9 @@
 
 - From your account profile page, generate an API-Key & note the Token value. 
 
-### Jenkins 
+### Step-3: Jenkins 
 
-## 1. Prepare the Installation Manifests 
+#### 1. Prepare the Installation Manifests 
 
 (Jenkins manifests are placed in k8s/jenkins) 
 
@@ -68,13 +68,13 @@
 
 - Update the service type in the [service.yaml](https://github.com/ksatchit/hce-jenkins-integration-demo/blob/f9337fd9f9682e9eff5b287017eb59e3697ac9c4/k8s/jenkins/service.yaml#L13) if needed (Default type used is `LoadBalancer`. If you are running this on-prem w/o ingress or in your machine, use `NodePort`)
 
-## 2. Install the Jenkins Instance
+#### 2. Install the Jenkins Instance
 
 - Execute `kubectl apply` of the manifests provided & wait for the Jenkins pod to enter `Running` status 
 
-## 3. Configure Jenkins Instance
+#### 3. Configure Jenkins Instance
 
-### User Access & Plugin Setup 
+##### User Access & Plugin Setup 
 
 - Access the Jenkins dashboard using the external IP/service endpoint 
 
@@ -85,7 +85,7 @@
 
 - Follow along to **install recommended plugins** & **create a Jenkins user** (skip new user creation if you'd like to continue using the admin credentials)
 
-### Instance Configuration  
+##### Instance Configuration  
 
 - In the **Manage Jenkins** page, select **Configure System**. 
 
@@ -106,7 +106,7 @@
 **Note**: If you face issues in saving forms or in navigating Jenkins screens, you may want to select the checkbox to **Enable Proxy Compatibility**  in 
 the **CSRF Protection** section of the **Configure Global Security** page. 
 
-### Pipeline Configuration 
+##### Pipeline Configuration 
 
 - From the **Jenkins Dashboard**, click on **New Item**, select a **Pipeline** & click **OK**
 
