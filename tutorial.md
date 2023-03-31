@@ -25,8 +25,6 @@
 
 - You will see a modal asking to to "Enable Chaos Infrastructure To Run Your First Chaos Experiment". Proceed with setting up of the chaos infrastructure on the "default project". You can create a dedicated/new project if you wish. To setup the chaos infra, follow the steps outlined in [Connect Chaos Infrastructures](https://developer.harness.io/docs/chaos-engineering/user-guides/connect-chaos-infrastructures). 
 
-  **Note**: Use the same Kubernetes cluster in which the Gitlab agent has been setup in Step-1/2. 
-
 - Add a new chaoshub by following the steps outlined in [Add Chaos Hub](https://developer.harness.io/docs/chaos-engineering/user-guides/add-chaos-hub) by using the GitHub repo URL https://github.com/ksatchit/boutique-chaos-demo
 
 - Execute the chaos experiment **boutique-carts-cpu-starvation** following steps provided in [Launch Experiment From ChaosHub](https://developer.harness.io/docs/chaos-engineering/user-guides/construct-and-run-custom-chaos-experiments#launch-an-experiment-from-chaos-hub)
