@@ -23,7 +23,7 @@ Despite being able to download curl commands from our [Postman collection](https
 - Store account information and api keys as secrets 
 - Parameterize requirements (experiment IDs) and expectations (resilience score) in the pipeline  
     
-The detailed documenttation can be found in [tutorial.md](./tutorial.md) 
+The detailed documentation can be found in [tutorial.md](./tutorial.md) 
 
 
 
