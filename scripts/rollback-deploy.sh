@@ -7,8 +7,8 @@ obtained_resilience_score=$(echo "$1" | tr -d '"')
 echo "Obtained Resilience Score: ${obtained_resilience_score}"
 
 if [ $obtained_resilience_score -lt ${EXPECTED_RESILIENCE_SCORE} ]; then
-  /var/jenkins_home/kubectl rollout undo deployment/cartservice -n boutique
+  kubectl rollout undo deployment/cartservice -n boutique
   echo "verify rollback completion.."
-  /var/jenkins_home/kubectl rollout status deployment cartservice -n boutique
+  kubectl rollout status deployment cartservice -n boutique
   exit 1
 fi 
