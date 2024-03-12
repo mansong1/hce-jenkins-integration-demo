@@ -19,7 +19,7 @@ spec:
       serviceAccountName: jenkins-admin
       containers:
         - name: jenkins
-          image: uditgaurav/jenkins:latest
+          image: aady12/jenkins:2
           imagePullPolicy: Always
           resources:
             limits:
