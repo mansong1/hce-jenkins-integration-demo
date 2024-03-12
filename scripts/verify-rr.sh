@@ -9,6 +9,6 @@ set -e
 
 resiliencyScore=$(/var/jenkins_home/hce-cli generate --api validate-resilience-score  --account-id=${ACCOUNT_ID} \
 --project-id ${PROJECT_ID} --notifyID=$1  \
---api-key ${API_KEY} --file-name /var/tmp/hce-api.sh)
+--api-key ${API_KEY} --file-name /var/jenkins_home/hce-api.sh)
 
 echo "${resiliencyScore}"
