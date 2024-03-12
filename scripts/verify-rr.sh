@@ -7,8 +7,8 @@ set -e
 
 #chmod +x hce-api-saas
 
-resiliencyScore=$(/var/jenkins_home/hce-cli generate --api validate-resilience-score  --account-id=${ACCOUNT_ID} \
+resiliencyScore=$(hce-cli generate --api validate-resilience-score  --account-id=${ACCOUNT_ID} \
 --project-id ${PROJECT_ID} --notifyID=$1  \
---api-key ${API_KEY} --file-name /var/jenkins_home/hce-api.sh)
+--api-key ${API_KEY} --file-name hce-api.sh)
 
 echo "${resiliencyScore}"
