@@ -7,7 +7,8 @@ pipeline {
     //    }
     
     parameters {
-           string(name: 'WORKFLOW_ID', defaultValue: '9bd2855f-b822-464c-9906-0f9ebe824cc6') 
+           // https://app.harness.io/ng/account/cTU1lRSWS2SSRV9phKvuOA/chaos/orgs/default/projects/ChaosDev/experiments/d7c9d243-0219-4f7c-84c2-3004e59e4505/chaos-studio?tab=BUILDER&experimentName=boutique-cart-cpu-hog&infrastructureType=Kubernetes&experimentType=experiment&unsavedChanges=false
+           string(name: 'WORKFLOW_ID', defaultValue: 'd7c9d243-0219-4f7c-84c2-3004e59e4505') 
            string(name: 'EXPECTED_RESILIENCE_SCORE', defaultValue: '100')
     }
 
