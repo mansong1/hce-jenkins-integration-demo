@@ -9,4 +9,4 @@ set -e
 
 /var/jenkins_home/hce-cli generate --api monitor-experiment --account-id=${ACCOUNT_ID} \
 --project-id ${PROJECT_ID} --notifyID=$1  \
---api-key ${API_KEY} --file-name hce-api.sh --timeout="500"
+--api-key ${API_KEY} --file-name /var/tmp/hce-api.sh --timeout="500"
