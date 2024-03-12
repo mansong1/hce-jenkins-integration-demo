@@ -9,7 +9,7 @@ set -e
 
 output=$(/var/jenkins_home/hce-cli generate --api launch-experiment --account-id=${ACCOUNT_ID} \
 --project-id ${PROJECT_ID} --workflow-id ${WORKFLOW_ID} \
---api-key ${API_KEY} --file-name hce-api.sh | /var/jenkins_home/jq -r '.data.runChaosExperiment.notifyID')
+--api-key ${API_KEY} --file-name /var/tmp/hce-api.sh | /var/jenkins_home/jq -r '.data.runChaosExperiment.notifyID')
 
 echo ${output}
 
