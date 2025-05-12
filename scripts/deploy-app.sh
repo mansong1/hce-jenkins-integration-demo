@@ -5,5 +5,5 @@ kubectl apply -f https://raw.githubusercontent.com/mansong1/hce-jenkins-integrat
 
 echo "waiting for deploy rollout to complete.."
 
-kubectl rollout status deployment cartservice -n boutique
+kubectl rollout status deployment cartservice -n onlineboutique
 
