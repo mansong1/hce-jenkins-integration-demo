@@ -5,7 +5,7 @@ metadata:
     app: cartservice
     event: chaos-day
   name: cartservice
-  namespace: boutique
+  namespace: onlineboutique
 spec:
   revisionHistoryLimit: 10
   replicas: 3
